@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gaptabuniverse.primary"
+    android:versionCode="3"
+    android:versionName="0.3">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:name="com.gaptabuniverse.primary.Primary"
+        android:allowBackup="true"
+        android:icon="@mipmap/primary_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.gaptabuniverse.primary.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gaptabuniverse.primary.base.SubjectMenuActivity"
+            android:parentActivityName="com.gaptabuniverse.primary.MainActivity" />
+        <activity
+            android:name="com.gaptabuniverse.primary.math.BasicMathActivity"
+            android:parentActivityName="com.gaptabuniverse.primary.base.SubjectMenuActivity" />
+        <activity
+            android:name="com.gaptabuniverse.primary.timemoney.TimeActivity"
+            android:parentActivityName="com.gaptabuniverse.primary.base.SubjectMenuActivity" />
+        <activity
+            android:name="com.gaptabuniverse.primary.math.SortingActivity"
+            android:parentActivityName="com.gaptabuniverse.primary.base.SubjectMenuActivity" />
+        <activity
+            android:name="com.gaptabuniverse.primary.spelling.SpellingActivity"
+            android:parentActivityName="com.gaptabuniverse.primary.base.SubjectMenuActivity" />
+        <activity
+            android:name="com.gaptabuniverse.primary.partsofspeech.plurals.PluralActivity"
+            android:parentActivityName="com.gaptabuniverse.primary.base.SubjectMenuActivity" />
+
+        <activity android:name="com.gaptabuniverse.primary.ScoresActivity" />
+        <activity android:name="com.gaptabuniverse.primary.SettingsActivity" />
+        <activity android:name="com.gaptabuniverse.primary.NounCleanActivity"></activity>
+    </application>
+
+</manifest>
